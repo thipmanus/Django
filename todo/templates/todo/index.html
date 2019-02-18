@@ -8,7 +8,7 @@
         {% csrf_token %}
         <!-- Todo Name -->
         <div class="form-group">
-            <label for="todo" class="col-sm-3 control-label">Todo</label>
+            <label for="todo" class="col-sm-3 control-label">หัวข้อที่ต้องการบันทึก</label>
             <div class="col-sm-6">
                 {{ form.body }}
             </div>
@@ -18,7 +18,7 @@
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6">
                 <button type="submit" class="btn btn-default">
-                    <i class="fa fa-plus"></i> Add Todo
+                    <i class="fa fa-plus"></i> จัดเก็บ
                 </button>
             </div>
         </div>
@@ -27,10 +27,10 @@
     
 
     <!-- Current Todos -->
-    <h2>Current Todos</h2>
+    <h2>บันทึก</h2>
     <table class="table table-striped todo-table">
         <thead>
-            <th>Todos</th><th>&nbsp;</th>
+            <th>รายการที่บันทึกไว้</th><th>&nbsp;</th>
         </thead>
 
         <tbody>
@@ -43,7 +43,7 @@
                     <td>
                         <form action="{% url 'todo:delete' post.id %}" method="post">
                             {% csrf_token %}
-                            <button>Delete</button>
+                            <button>ลบ</button>
                         </form>
                     </td>
                 </tr>
